@@ -14,5 +14,6 @@
  
 FROM  centos:latest
 MAINTAINER chintanjain092000@gmail.com
-RUN apt install apache2
+RUN sudo apt install apache2
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80   
